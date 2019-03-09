@@ -75,7 +75,7 @@ var flipCard = function(){
 }
 
 var createBoard = function(){
-	shuffle(cards);
+	
 	for(var i = 0;i<cards.length;i++){
 		var cardElement = document.createElement('img');
 		cardElement.setAttribute('src','images/back.png')
@@ -96,9 +96,12 @@ var resetButton = function(){
 		flippedCards[i].classList.remove("flipped");
 	}
 
-	shuffle(cards);
 
 	cardsInPlay = [];
+}
+var shuffleCards = function(){
+	resetButton();
+	shuffle(cards);
 }
 
 
